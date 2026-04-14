@@ -1,18 +1,19 @@
 <!-- ShieldClaw - Landing Page -->
 
-<p align="center">
-  <img src="https://img.shields.io/badge/ShieldScore-0%F0%9F%9F%A7%20HOLD%20-%2035%F0%9F%9F%A8%20PARTIAL%20-%2010%F0%9F%94%A5%20EXIT-blue?style=for-the-badge" alt="ShieldScore">
-  <img src="https://img.shields.io/badge/Chains-Base%20%7C%20Solana%20%7C%20BSC-yellow?style=for-the-badge" alt="Chains">
-  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License">
-  <img src="https://img.shields.io/badge/OpenClaw-Skills-blue?style=for-the-badge" alt="OpenClaw">
-</p>
+<div align="center">
 
-<p align="center">
-  <h1>🛡️ ShieldClaw</h1>
-  <h3>The coin that protects you from yourself.</h3>
-  <p><i>"Don't sell in panic. Check the score."</i></p>
-  <p><b>Built on Base · Powered by GMGN · Installed by AI agents worldwide</b></p>
-</p>
+![ShieldClaw Banner](https://img.shields.io/badge/ShieldScore-0%F0%9F%9F%A7%20HOLD%20→%2035%F0%9F%9F%A8%20PARTIAL→%2010%F0%9F%94%A5%20EXIT-blue?style=for-the-badge)
+![Chains](https://img.shields.io/badge/Chains-Base%20%7C%20Solana%20%7C%20BSC-yellow?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![OpenClaw](https://img.shields.io/badge/Powered%20by-OpenClaw-blue?style=for-the-badge)
+
+# 🛡️ SHIELDC LA W
+
+### The coin that protects you from yourself.
+
+*"Don't sell in panic. Check the score."*
+
+**Built on Base · Powered by GMGN · Installed by AI agents worldwide**
 
 ---
 
@@ -146,7 +147,7 @@ bash scripts/panic-check.sh base <TOKEN_ADDRESS>
 - [ ] Telegram bot integration
 - [ ] Discord alerts
 - [ ] Mobile-friendly dashboard
-- [ ] whale wallet tracking
+- [ ] Whale wallet tracking
 - [ ] Multi-sig safe integration
 - [ ] Agent-to-agent protocol
 
@@ -168,6 +169,6 @@ ShieldClaw is **educational and entertainment** only. This is not financial advi
 
 ---
 
-<p align="center">
-  <b>🛡️ SHIELDC LA W</b> — <i>Don't panic. Check the score.</i>
-</p>
+**🛡️ SHIELDC LA W** — *Don't panic. Check the score.*
+
+</div>
