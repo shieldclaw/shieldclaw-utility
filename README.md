@@ -7,7 +7,7 @@
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 ![OpenClaw](https://img.shields.io/badge/Powered%20by-OpenClaw-blue?style=for-the-badge)
 
-# 🛡️ SHIELDC LA W
+# 🛡️ SHIELDCLAW
 
 ### The coin that protects you from yourself.
 
@@ -171,4 +171,4 @@ ShieldClaw is **educational and entertainment** only. This is not financial advi
 
 ---
 
-<p align="center"><b>🛡️ SHIELDC LA W</b> — <i>Don't panic. Check the score.</i></p>
+<p align="center"><b>🛡️ SHIELDCLAW</b> — <i>Don't panic. Check the score.</i></p>
