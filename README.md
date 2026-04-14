@@ -17,6 +17,8 @@
 
 ---
 
+</div>
+
 ## ⚡ What is ShieldClaw?
 
 ShieldClaw is a **meme coin with a purpose** — helping crypto holders make smarter exit decisions through on-chain intelligence.
@@ -169,6 +171,4 @@ ShieldClaw is **educational and entertainment** only. This is not financial advi
 
 ---
 
-**🛡️ SHIELDC LA W** — *Don't panic. Check the score.*
-
-</div>
+<p align="center"><b>🛡️ SHIELDC LA W</b> — <i>Don't panic. Check the score.</i></p>
