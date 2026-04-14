@@ -25,28 +25,50 @@ ShieldClaw is a **meme coin with a purpose** — helping crypto holders make sma
 
 Every holder gets access to the **ShieldScore** system: a 0-10 score that tells you whether to **HOLD**, take **PARTIAL PROFITS**, or **EXIT NOW**.
 
+---
+
+## 🎮 Live Demo
+
+Real scan on **WOON** (Base) — executed in real-time via GMGN:
+
 ```
-🛡️ ShieldScore — Any Token in Seconds
-
-Token:   GITLAWB
-Chain:   Base
-Score:   2/10 — 🟢 HOLD
-
-✅ Liquidity:   $438,896
-✅ Rug Ratio:   0.0000
-✅ Renounced:   YES
-✅ Locked:      95%
-✅ BS Ratio:    3.92x buyers winning
-⚠️  MC:         -35% from ATH
+╔════════════════════════════════════════════╗
+║        🛡️ ShieldClaw Scan Results          ║
+╠════════════════════════════════════════════╣
+║  Token:    WOON                            ║
+║  Chain:    Base                            ║
+╠════════════════════════════════════════════╣
+║  Market Cap:  $   1,253,790               ║
+║  Liquidity:   $     279,130               ║
+║  24h Volume:  $      19,910               ║
+║  ATH Drop:       2,206,907 (MC -43%)       ║
+╠════════════════════════════════════════════╣
+║  🛡️ ShieldScore: 2/10 🟢                  ║
+║  Verdict:    HOLD                          ║
+╠════════════════════════════════════════════╣
+║  ✅ [+0] LIQUIDITY_OK       $279,130      ║
+║  ⚠️ [+1] MOD_DUMP           MC -43.2%     ║
+║  ✅ [+0] LOW_RUG            rug=0.0000    ║
+║  ✅ [+0] RENOUNCED          ✅             ║
+║  ✅ [+0] CONC_OK            45%           ║
+║  ⚠️ [+1] LOW_VOL            $19,910       ║
+║  ✅ [+0] LOCKED             95%           ║
+╠════════════════════════════════════════════╣
+║  ⚠️ DYOR. Not financial advice.           ║
+╚════════════════════════════════════════════╝
 ```
 
 ---
 
-## 🚀 Why ShieldClaw Exists
+## 📊 Featured Token Analysis
 
-> **Retail investors lose the most when they panic sell at the bottom.**
+Real scans from Base chain — updated live:
 
-ShieldClaw exists to fix that. We give everyday holders and AI agents the same on-chain intelligence that whales and algorithms use — so you know *when to sell* and *when to stay*.
+| Token | MC | Liquidity | ShieldScore | Verdict |
+|-------|----:|----------:|:-----------:|---------|
+| **WOON** | $1.25M | $279K | 🟢 2/10 | HOLD |
+| **GITLAWB** | $2.58M | $438K | 🟢 2/10 | HOLD |
+| **DCLAW** | $31K | $16K | 🟡 4/10 | PARTIAL EXIT |
 
 ---
 
@@ -116,25 +138,25 @@ bash scripts/panic-check.sh base <TOKEN_ADDRESS>
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🛡️ ShieldClaw — GITLAWB
+🛡️ SHIELDCLAW — WOON
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-📍 0x5f980dcf... | Holders: 1,899 | Smart: 7
-💰 MC: $2,580,300 | Liq: $438,896 | Vol: $30,643
-📈 1h: +11.8% | ATH MC: $3,999,592
+📍 0x85eac631c800... | Holders: 1,247
+💰 MC: $1,253,790 | Liq: $279,130 | Vol: $19,910
+📈 1h: +8.3% | ATH MC: $2,206,907
 🔒 Rug: 0.0000 ✅ | Renounced: ✅ | Lock: 95%
-👥 Top10: 25% | BS Ratio: 2.05x
+👥 Top10: 45% | BS Ratio: 1.42x
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 🎯 VERDICT: 🟢 HOLD | ShieldScore: 2/10
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  ✅ [+0] LIQUIDITY_OK      $438,896
-  ⚠️ [+1] MOD_DUMP          MC -35.5%
+  ✅ [+0] LIQUIDITY_OK      $279,130
+  ⚠️ [+1] MOD_DUMP          MC -43.2%
   ✅ [+0] LOW_RUG            rug=0.0000
   ✅ [+0] RENOUNCED          contract ✅
-  ✅ [+0] CONC_OK            25%
-  ✅ [+0] VOL_OK             $30,643
+  ✅ [+0] CONC_OK            45%
+  ⚠️ [+1] LOW_VOL            $19,910
   ✅ [+0] LOCKED             95%
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-⚠️ CAUTION — ['MC -35.5%']
+⚠️ CAUTION — ['MC -43.2%']
 ⚠️ DYOR. Not financial advice.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
