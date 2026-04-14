@@ -1,148 +1,173 @@
-# 🛡️ SHIELDC LA W
+<!-- ShieldClaw - Landing Page -->
 
-*A coin that's also a weapon — ShieldClaw is a meme coin with a purpose: protecting holders from panic selling through on-chain intelligence.*
+<p align="center">
+  <img src="https://img.shields.io/badge/ShieldScore-0%F0%9F%9F%A7%20HOLD%20-%2035%F0%9F%9F%A8%20PARTIAL%20-%2010%F0%9F%94%A5%20EXIT-blue?style=for-the-badge" alt="ShieldScore">
+  <img src="https://img.shields.io/badge/Chains-Base%20%7C%20Solana%20%7C%20BSC-yellow?style=for-the-badge" alt="Chains">
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License">
+  <img src="https://img.shields.io/badge/OpenClaw-Skills-blue?style=for-the-badge" alt="OpenClaw">
+</p>
 
-**SHIELDC LA W** is a utility-meme coin deployed on Base. Every holder automatically accesses the ShieldClaw skill for AI-powered exit strategy analysis.
-
-> *"Don't sell in panic. Let ShieldClaw tell you when to sell."*
+<p align="center">
+  <h1>🛡️ ShieldClaw</h1>
+  <h3>The coin that protects you from yourself.</h3>
+  <p><i>"Don't sell in panic. Check the score."</i></p>
+  <p><b>Built on Base · Powered by GMGN · Installed by AI agents worldwide</b></p>
+</p>
 
 ---
 
-## 🛡️ What is ShieldClaw?
+## ⚡ What is ShieldClaw?
 
-ShieldClaw is an on-chain exit strategy agent that analyzes any token using GMGN data and computes a **ShieldScore (0–10)**:
+ShieldClaw is a **meme coin with a purpose** — helping crypto holders make smarter exit decisions through on-chain intelligence.
+
+Every holder gets access to the **ShieldScore** system: a 0-10 score that tells you whether to **HOLD**, take **PARTIAL PROFITS**, or **EXIT NOW**.
+
+```
+🛡️ ShieldScore — Any Token in Seconds
+
+Token:   GITLAWB
+Chain:   Base
+Score:   2/10 — 🟢 HOLD
+
+✅ Liquidity:   $438,896
+✅ Rug Ratio:   0.0000
+✅ Renounced:   YES
+✅ Locked:      95%
+✅ BS Ratio:    3.92x buyers winning
+⚠️  MC:         -35% from ATH
+```
+
+---
+
+## 🚀 Why ShieldClaw Exists
+
+> **Retail investors lose the most when they panic sell at the bottom.**
+
+ShieldClaw exists to fix that. We give everyday holders and AI agents the same on-chain intelligence that whales and algorithms use — so you know *when to sell* and *when to stay*.
+
+---
+
+## 📊 How ShieldScore Works
+
+The ShieldScore (0-10) is computed from 8 on-chain signals:
 
 | Score | Verdict | Action |
-|-------|---------|--------|
-| 0–2 | 🟢 HOLD | Stay, monitor |
-| 3–5 | 🟡 PARTIAL EXIT | Sell 50% |
-| 6–10 | 🔴 FULL EXIT | Exit now |
+|:-----:|---------|--------|
+| **0-2** | 🟢 HOLD | Stay calm. Nothing to worry about. |
+| **3-5** | 🟡 PARTIAL EXIT | Take some profits off the table. |
+| **6-10** | 🔴 FULL EXIT | Get out. Now. |
 
-**Works on:** Base, Solana, BSC
+**Signal Weights:**
+
+| Signal | Points | Meaning |
+|--------|:------:|---------|
+| Liquidity < $10k | +2 | Slippage trap |
+| MC -50% from ATH | +2 | Major dump |
+| MC -30% from ATH | +1 | Moderate drawdown |
+| Rug Ratio > 0.5 | +3 | Honeypot / trap |
+| Not Renounced | +2 | Dev can mint/freeze |
+| Top 10 > 60% held | +1 | Whale risk |
+| Volume < $50k/24h | +1 | No interest |
 
 ---
 
 ## 🤖 For AI Agents
 
-### Install as OpenClaw Skill
+ShieldClaw is built for the **agent economy**. Install once, analyze any token on Base, Solana, or BSC.
 
 ```bash
-# Copy the skill folder to your OpenClaw skills directory
-cp -r .agents/skills/shieldclaw ~/.openclaw/skills/
+# Install
+git clone https://github.com/shieldclaw/shieldclaw-utility.git
+cp -r shieldclaw-utility/.agents/skills/shieldclaw ~/.openclaw/skills/
 
-# Or use clawhub (if available)
-clawhub install shieldclaw
+# Use — any agent can now:
+"check GITLAWB", "should I sell?", "exit strategy?", "rug check"
 ```
 
-### Usage
+**AI agents that install ShieldClaw** naturally shill the coin every time they run analysis — creating organic, utility-driven growth.
 
-When a user asks to analyze a token:
-```
-"cek token X", "aman ga?", "should I sell", "exit strategy",
-"rug check", "liquidity", "whale", "smart money", "panic sell",
-"kapan exit", "hold atau jual", "shieldclaw", "scannya", "analisis token"
-```
-
-The ShieldClaw skill will:
-1. Fetch GMGN data (bypasses Cloudflare)
-2. Extract liquidity, rug ratio, holder distribution, whale activity
-3. Compute ShieldScore
-4. Output a formatted report with exit recommendations
+> *"Every check is a shill. Every shill is awareness."*
 
 ---
 
-## 💻 CLI One-Liner
+## 💻 Quick Start
 
 ```bash
-# Install gmgn-cli first
+# 1. Install gmgn-cli
 npm install -g gmgn-cli
 
-# Quick ShieldScore check (any chain)
-ADDR="<TOKEN_CONTRACT>"
+# 2. Check any token
+ADDR="0x5f980dcfc4c0fa3911554cf5ab288ed0eb13dba3"
 gmgn-cli market trending --chain base --interval 1h --limit 20 --raw \
-  | python3 -c "
-import json,sys
-d=json.loads(sys.stdin.read())
-t=next((x for x in d['data']['rank'] if x['address'].lower()=='$ADDR'.lower()),None)
-if t:
-    mc=float(t.get('market_cap',0));liq=float(t.get('liquidity',0))
-    vol=float(t.get('volume',0));rug=float(t.get('rug_ratio',0))
-    is_ren=int(t.get('is_renounced',0) or 0);lock=float(t.get('lock_percent',0) or 0)
-    top10=float(t.get('top_10_holder_rate',0));smart=int(t.get('smart_degen_count',0))
-    holders=int(t.get('holder_count',0));buys=int(t.get('buys',0) or 0);sells=int(t.get('sells',0) or 0)
-    ahm=float(t.get('history_highest_market_cap',0));change1h=float(t.get('price_change_percent',0))
-    score=0
-    if liq<10000:score+=2
-    if ahm>0 and mc>0 and (mc-ahm)/ahm*100<-50:score+=2
-    elif ahm>0 and mc>0 and (mc-ahm)/ahm*100<-30:score+=1
-    if rug>0.5:score+=3
-    elif rug>0.1:score+=1
-    if is_ren==0:score+=2
-    if top10>0.6:score+=1
-    if vol<50000:score+=1
-    v='🟢' if score<=2 else '🟡' if score<=5 else '🔴'
-    print(f'{t[\"symbol\"]} ShieldScore={score}/10 {v} | mc=\${mc:,.0f} liq=\${liq:,.0f}')
-"
+  | python3 scripts/deep-dive.py base $ADDR
+```
+
+**Or use the one-liner:**
+```bash
+bash scripts/panic-check.sh base <TOKEN_ADDRESS>
 ```
 
 ---
 
-## 📊 ShieldScore Signals
-
-| Signal | Weight | Trigger |
-|--------|--------|---------|
-| Liquidity < $10k | +2 | Thin liquidity = slippage risk |
-| ATH Dump > 50% | +2 | Price collapsed from peak |
-| ATH Dump > 30% | +1 | Moderate drawdown |
-| Rug Ratio > 0.5 | +3 | High trap probability |
-| Rug Ratio > 0.1 | +1 | Medium risk |
-| Not Renounced | +2 | Dev can mint/freeze |
-| Top 10 > 60% | +1 | Whale concentration |
-| Volume < $50k | +1 | No real interest |
-
----
-
-## 📁 Repository Structure
+## 🎯 Sample Output
 
 ```
-ShieldClaw/
-├── README.md
-├── LICENSE
-├── .agents/
-│   └── skills/
-│       └── shieldclaw/
-│           └── SKILL.md          ← OpenClaw agent skill
-├── scripts/
-│   ├── panic-check.sh           ← Quick CLI scanner
-│   └── deep-dive.py             ← Holder analysis + full report
-├── examples/
-│   └── sample-output.md         ← Example output
-└── references/
-    └── metrics-guide.md         ← ShieldScore signal guide
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🛡️ ShieldClaw — GITLAWB
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📍 0x5f980dcf... | Holders: 1,899 | Smart: 7
+💰 MC: $2,580,300 | Liq: $438,896 | Vol: $30,643
+📈 1h: +11.8% | ATH MC: $3,999,592
+🔒 Rug: 0.0000 ✅ | Renounced: ✅ | Lock: 95%
+👥 Top10: 25% | BS Ratio: 2.05x
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🎯 VERDICT: 🟢 HOLD | ShieldScore: 2/10
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ✅ [+0] LIQUIDITY_OK      $438,896
+  ⚠️ [+1] MOD_DUMP          MC -35.5%
+  ✅ [+0] LOW_RUG            rug=0.0000
+  ✅ [+0] RENOUNCED          contract ✅
+  ✅ [+0] CONC_OK            25%
+  ✅ [+0] VOL_OK             $30,643
+  ✅ [+0] LOCKED             95%
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⚠️ CAUTION — ['MC -35.5%']
+⚠️ DYOR. Not financial advice.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
 ---
 
-## 🛠️ Requirements
+## 🗺️ Roadmap
 
-- **gmgn-cli** — `npm install -g gmgn-cli`
-- **Python 3** — for parsing and scoring
-- **OpenClaw** — for agent skill installation
+- [x] Base chain support (primary)
+- [ ] Solana chain support
+- [ ] BSC chain support
+- [ ] Telegram bot integration
+- [ ] Discord alerts
+- [ ] Mobile-friendly dashboard
+- [ ] whale wallet tracking
+- [ ] Multi-sig safe integration
+- [ ] Agent-to-agent protocol
+
+---
+
+## 🤝 Contributing
+
+Open an issue. Fork the repo. Ship a PR.
+
+ShieldClaw is built by and for the agent crypto community.
 
 ---
 
 ## ⚠️ Disclaimer
 
-SHIELDC LA W and ShieldClaw are for educational and entertainment purposes only. This is not financial advice. Always DYOR.
+ShieldClaw is **educational and entertainment** only. This is not financial advice. Always DYOR.
+
+*The coin protects you from panic. It cannot protect you from your own decisions.*
 
 ---
 
-## 🔗 Links
-
-- **Coin**: [SHIELDC LA W on Base](#) — *(add after launch)*
-- **Skill**: Install via clawhub or copy `.agents/skills/shieldclaw`
-- **GMGN**: [gmgn.ai](https://gmgn.ai)
-
----
-
-*"Don't panic. Check the score."* 🛡️
+<p align="center">
+  <b>🛡️ SHIELDC LA W</b> — <i>Don't panic. Check the score.</i>
+</p>
