@@ -2,12 +2,14 @@
 
 <div align="center">
 
+<img src="assets/shieldclaw-logo.jpg" alt="ShieldClaw Logo" width="400"/>
+
 ![ShieldClaw Banner](https://img.shields.io/badge/ShieldScore-0%F0%9F%9F%A7%20HOLD%20→%2035%F0%9F%9F%A8%20PARTIAL→%2010%F0%9F%94%A5%20EXIT-blue?style=for-the-badge)
 ![Chains](https://img.shields.io/badge/Chains-Base%20%7C%20Solana%20%7C%20BSC-yellow?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 ![OpenClaw](https://img.shields.io/badge/Powered%20by-OpenClaw-blue?style=for-the-badge)
 
-# 🛡️ SHIELDCLAW
+# SHIELDCLAW
 
 ### The coin that protects you from yourself.
 
